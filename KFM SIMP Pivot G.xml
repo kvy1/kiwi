@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<patches>
+  <patch file="skill3_contextscriptdata_kungfufighter_contextsimplemode.xml">
+  <!--<select-node query="/table/contextscript/stance[@stance='단타']/layer">-->
+  <select-nodes query="/table/contextscript/stance">
+    <select-node query="./layer">
+    <insert-sibling-before name="layer">
+      <append-buffer>
+      <![CDATA[ 
+        <decision>
+              <result special-1="112230" control-mode="classic" />
+              <result special-1="112230" control-mode="bns" />
+        </decision>
+      ]]>
+      </append-buffer>
+    </insert-sibling-before>
+    </select-node>
+  </select-nodes>
+  </patch>
+</patches>
